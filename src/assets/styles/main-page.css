@@ -1,0 +1,600 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #0071BC;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+
+h1 {
+    font-size: 3em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+
+h3 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+
+h4 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+
+h5 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+
+h6 {
+    font-size: 2.2em;
+    line-height: 1.1;
+}
+
+p {
+    font-size: 1em;
+}
+
+/** Header styles **/
+.header {
+    width: calc(100vw - 100px);
+    height: 180px;
+    background-position: left bottom;
+    background-image: url('../images//repeating-pattern.png');
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 30px 60px 70px;
+    margin: 0;
+    animation-duration: 7s;
+    animation-name: waveAnimation;
+    animation-iteration-count: infinite;
+
+}
+
+.header .logo {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.header .logo>img {
+    width: 240px;
+    height: 150px;
+    display: block;
+}
+
+.header .navigation {
+    display: block;
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.header .navigation .navigation-container {
+    height: 132px;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .navigation .navigation-container .navigation-item {
+    position: relative;
+    padding: 100px 24px;
+}
+
+.header .navigation .navigation-container .navigation-item:first-child {
+    padding-left: 0;
+}
+
+.header .navigation .navigation-container .navigation-item:last-child {
+    padding-right: 0;
+}
+
+.header .navigation .navigation-container .navigation-item .navigation-item-link {
+    padding: 16px 32px;
+    background-color: #00CAE3;
+    font-size: 24px;
+    color: #ffffff;
+    border-radius: 32px;
+    border: 4px solid #00CAE3;
+    text-decoration: none;
+}
+
+.header .navigation .navigation-container .navigation-item .navigation-item-link:hover {
+    background-color: #0071BC;
+    color: #0dd8f2;
+    animation-duration: 2s;
+    animation-name: select;
+    animation-iteration-count: infinite;
+}
+
+/** main styles **/
+.main {
+    width: calc(100vw - 120px);
+    min-height: calc(100vh - 380px);
+    background-color: #2E6392;
+    padding: 60px;
+    margin: 0;
+
+}
+
+.page-title {
+    margin: 4rem 0 2rem 0;
+    text-align: center;
+    padding: 3rem;
+    width: calc(100vw - 100px);
+    height: 180px;
+    background-position: left bottom;
+    background-image: url('../images//repeating-pattern.png');
+    background-repeat: repeat-x;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 30px 60px 10px;
+    margin: 0;
+
+}
+
+.inner-page-title {
+    width: 100%;
+    text-align: center;
+}
+
+
+.inner-page-title .page-para-container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.inner-page-title .page-para-container>p {
+    text-align: justify;
+}
+
+.inner-page-title>h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: #ffffff;
+    margin: 3;
+    padding: 2;
+    border-bottom: 1px solid #ffffff;
+    border-bottom-width: right 100px;
+}
+
+
+.inner-page-title>p {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0 0 4rem 0;
+    padding: 1rem 4rem;
+
+}
+
+
+/** footer styles **/
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 180px;
+    background-color: #0071BC;
+    background-position: left top;
+    background-image: url('../images/repeating-pattern-footer.png');
+    background-repeat: repeat-x;
+}
+
+.footer .copy {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+/* carousel styles */
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.carousel-wrapper * {
+
+    box-sizing: border-box;
+}
+
+.title-wrapper {
+    width: 60%;
+    position: absolute;
+    z-index: 1;
+    top: 4rem;
+    left: 20%;
+    right: 25%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 1rem;
+    animation-duration: 1s;
+    animation-name: selecting;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+
+}
+
+
+.title-wrapper>h1,
+.title-wrapper>p {
+    text-align: center;
+
+}
+
+.carousel {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.carousel__photo {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    position: fixed;
+}
+
+.title-wrapper:hover {
+    animation-duration: 2s;
+    animation-name: selectin;
+    animation-iteration-count: infinite;
+}
+
+.carousel__photo.initial,
+.carousel__photo.active {
+    opacity: 1;
+    position: relative;
+    z-index: 900;
+}
+
+.carousel__photo.prev,
+.carousel__photo.next {
+    z-index: 800;
+}
+
+.carousel__photo.prev {
+    transform: translateX(-100%);
+}
+
+.carousel__photo.next {
+    transform: translateX(100%);
+}
+
+.carousel__button--prev {
+    position: absolute;
+    top: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid black;
+    position: fixed;
+    opacity: 50%;
+
+}
+
+.carousel__button--next {
+    position: absolute;
+    top: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid black;
+    position: fixed;
+    opacity: 50%;
+}
+
+.carousel__button--prev:hover {
+    position: absolute;
+    top: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    border-radius: 45%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid black;
+    position: fixed;
+    opacity: 70%;
+}
+
+.carousel__button--next:hover {
+    position: absolute;
+    top: 50%;
+    width: 6.5rem;
+    height: 6.5rem;
+    background-color: #ffffff;
+    transform: translateY(-50%);
+    border-radius: 45%;
+    cursor: pointer;
+    z-index: 1001;
+    border: 1px solid black;
+    position: fixed;
+    opacity: 70%;
+}
+
+.carousel__button--prev {
+    left: 2rem;
+}
+
+.carousel__button--next {
+    right: 2rem;
+}
+
+.carousel__button--prev::after,
+.carousel__button--next::after {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 54%;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carousel__button--next::after {
+    left: 47%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/** Galarry **/
+.gallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin: 2rem;
+}
+
+
+.card {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #FFF;
+    border-radius: 3rem;
+    position: relative;
+    object-fit: contain;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-image {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    z-index: 1;
+}
+
+.card-body {
+    padding: 2rem;
+    width: calc(100% - 4rem);
+    height: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    z-index: 2;
+    background-color: #ffffff;
+    opacity: 0;
+}
+
+.card:hover .card-body {
+    animation-duration: 1s;
+    animation-name: cardAnimation;
+    animation-fill-mode: forwards;
+}
+
+.card-body>h2.card-title {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    text-align: left;
+    color: #0d0d11;
+}
+
+.card-body>p.card-bodycopy {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    text-align: left;
+    color: #0d0d11;
+}
+
+.card-body>a.card-link {
+    display: block;
+}
+
+.scroll-container {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+.scroll-container img {
+    padding: 10px;
+}
+
+.main-card1 {
+    width: calc(100vw - 120px);
+    min-height: calc(100vh - 380px);
+    background-color: #2E6392;
+    padding: 60px;
+    margin: 0;
+    background-image: url(../images/card/card-2.jpg);
+}
+
+.link-wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-wrapper .new-page-link {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8rem;
+    animation-duration: 1s;
+    animation-name: selecting;
+    border: 3px solid rgb(57, 57, 57);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+/** cool bubble effect **/
+
+
+/** Key frame animation **/
+
+@keyframes boaling {
+    from {
+        height: 10;
+
+    }
+
+    50% {
+        height: -500;
+
+    }
+
+    to {
+        height: 10;
+
+    }
+}
+
+@keyframes select {
+    from {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes selecting {
+    from {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes cardAnimation {
+    from {
+        opacity: 1;
+        bottom: -60px;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    to {
+        opacity: 1;
+        bottom: 0;
+    }
+
+
+}
+
+@keyframes waveAnimation {
+    from {
+        height: 180px;
+    }
+
+    50% {
+        height: 200px;
+    }
+
+    to {
+        height: 180px;
+    }
+
+}
